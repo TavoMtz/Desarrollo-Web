@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería - Carrito de Compras</title>
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo de la cafetería" class="logo">
+        <h1>Carrito de Compras</h1>
+        <a href="menu.html" class="volver-menu">Volver al Menú</a>
+    </header>
+
+    <section class="carrito" id="carrito">
+        <h2>Tu Pedido</h2>
+        <ul id="lista-carrito">
+            </ul>
+        <p>Total: <span id="total">$ 0.00</span></p>
+        <button id="btn-pagar">Pagar</button>
+    </section>
+
+    <section class="pago" id="pago" style="display: none;">
+        <h2>Selecciona una opción de pago</h2>
+        <p>Total del pedido: <span id="total-a-pagar">$ 0.00</span></p>
+        <button id="btn-credito">Tarjeta de crédito</button>
+        <button id="btn-debito">Tarjeta de débito</button>
+    </section>
+
+    <section class="formulario-pago" id="formulario-pago" style="display: none;">
+        <h2>Llena los campos</h2>
+        <form id="pago-form">
+            <label for="nombre">Nombre del titular:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="tarjeta">Número de tarjeta:</label>
+            <input type="text" id="tarjeta" required>
+
+            <label for="fecha">Fecha de vencimiento:</label>
+            <input type="text" id="fecha" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" required>
+
+            <button type="submit">Listo</button>
+        </form>
+    </section>
+
+    <section class="confirmacion" id="confirmacion" style="display: none;">
+        <h2>Tu pedido estará listo en:</h2>
+        <p><span id="tiempo-espera"></span> minutos...</p>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

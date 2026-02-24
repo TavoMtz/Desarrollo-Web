@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainPage {
+    display: flex;
+    justify-content: flex-start; /* Align items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    width: 100%; /* Reduce width to leave space on the edges */
+    gap: 0px; /* Add spacing between the action buttons and the products section */
+    margin-top: 0px; /* Add margin to separate the main content from the header */
+    overflow-x: hidden;
+}
+
+.category-container {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.category-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(76, 43, 24, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.menu-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensure proper spacing between elements */
+    height: auto; /* Allow the height to adjust based on content */
+    min-height: 250px; /* Set a minimum height for consistency */
+    overflow: hidden; /* Ensure content stays within the card */
+}
+
+.menu-item img {
+    width: 100px; /* Set the width to 25px */
+    height: 100px; /* Set the height to 25px */
+    border-radius: 8px; /* Keep the rounded corners */
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+}
+
+.menu-item h3 {
+    margin: 10px 0; /* Add spacing around the name */
+    text-align: center; /* Center-align the text */
+    word-wrap: break-word; /* Allow long words to break and wrap to the next line */
+    width: 100%; /* Ensure the text stays within the card width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 10px; /* Add spacing between buttons */
+    align-items: flex-start; /* Align buttons to the left */
+    margin-top: 0; /* Ensure alignment with the first category */
+    position: sticky; /* Keep the buttons visible while scrolling */
+    top: 120px; /* Adjust based on the header height */
+}
+
+.action-buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #4C2B18;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px; /* Set a fixed width for consistency */
+    text-align: center; /* Center the text inside the button */
+}
+
+.action-buttons a:hover {
+    background-color: #6A3500;
+}
+
+.products-section {
+    flex: 1; /* Allow the products section to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

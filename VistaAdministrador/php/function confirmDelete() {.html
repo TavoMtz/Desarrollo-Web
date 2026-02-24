@@ -1,0 +1,9 @@
+function confirmDelete() {
+            if (confirm("¿Estás seguro que deseas eliminar este producto? Esta acción no se puede deshacer.")) {
+                deleteForm.submit(); // Submit the delete form if confirmed
+            }
+        }
+
+<form id="deleteForm" action="delete_producto.php" method="post" class="delete-form">
+                    <input type="hidden" id="idProductoToDelete" name="idProductoToDelete">
+                    <button id="eliminar" class="eliminar" type="button" style="margin-top: 20px; background-color: red; color: white;" onclick="confirmDelete()">Eliminar Producto</button>

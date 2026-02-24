@@ -1,0 +1,58 @@
+.contenedorGeneral{
+    display: flex;
+    flex-direction:row;
+    height: 100vh; /* 100% del alto visible */
+    width: 100vw; /* 100% del ancho visible */
+}
+.contenedorA{
+    display: flex;
+    flex: 1;
+    background-color: #BF7D3B;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+}
+.T1{
+    color: white;
+    font-size: 40px;
+}
+.contenedorB{
+    display: flex;
+    flex: 1;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+}
+.contenedorB1{
+    display: flex;
+    background-color: #2D5A8A;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px;
+    flex-direction: column;
+} 
+.contenedorB2{
+    display: flex;
+}
+.inputBox{
+    width: 300px;
+    border-radius: 5px;
+}
+.form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cancelar{
+    display: flex; 
+}
+.cancelar2{
+    color: white;
+    text-decoration: none;
+}
+.boton{
+    border-radius: 10px;
+    width: 80px;
+}

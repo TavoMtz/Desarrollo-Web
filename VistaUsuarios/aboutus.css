@@ -1,0 +1,74 @@
+body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: url('img/woodbg.png') center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+  }
+ 
+  .header{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4C2B18;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+            .header {
+                display: none;
+            }
+        }
+
+.headerButton{
+    color: white;
+    text-decoration: none;
+}
+
+.headerButton:hover{
+    transform: translateY(-2px);
+    text-shadow: 0 0 5px rgb(255,255,255);
+}
+  
+  .about-section {
+    padding: 70px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .about-section h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .about-intro {
+    background-color: rgba(165, 103, 49, 0.95);
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-bottom: 40px;
+  }
+  
+  .about-intro p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .about-text {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+  }
+  
+  .about-text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin: 0;
+  }
+  

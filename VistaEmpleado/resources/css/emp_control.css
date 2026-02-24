@@ -1,0 +1,125 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: wheat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color:#4C2B18;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em; /* Adjusted font size to match logoutButton */
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #4C2B18;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .control-container {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Instead of a fixed width */
+            max-width: 800px;
+        }
+
+        .control-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .control-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .control-buttons a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #4C2B18;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .control-buttons a:hover {
+            background-color: #6A3500;
+        }
+
+        .logoutButton {
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.logoutButton:hover {
+    background-color: #fff;
+    color: #4C2B18; /* Change text color on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logoutButton {
+        margin-top: 10px;
+    }
+
+    .control-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .control-buttons a {
+        font-size: 0.9em; /* Adjust button size for smaller screens */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Adjust header font size */
+    }
+
+    .control-buttons a {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../resources/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/img/favicon_io/favicon-32x32.png">
+    <link rel="manifest" href="../resources/img/favicon_io/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="../resources/css/pago.css">
+</head>
+<body>
+    <section class="fondo">
+        <form class="contenedorForms" id="formPago" method="POST">
+            <div class="titleContainer">
+                <h2 class="title">Fase de Pago</h2>
+            </div>
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input class="inputBox" placeholder="Nombre(s) del titular" type="text" id="nombre" name="nombre" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input class="inputBox" placeholder="Apellidos del titular" type="text" id="apellido" name="apellido" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input class="inputBox" placeholder="Teléfono" type="text" id="telefono" name="telefono" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
+                <input class="inputBox" placeholder="ejemplo@gmail.com" type="email" id="correo" name="correo" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="numeroTarjeta">Número de tarjeta:</label>
+                <input class="inputBox" placeholder="**** **** **** ****" type="text" id="numeroTarjeta" name="numeroTarjeta" maxlength="16" pattern="\d{16}" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="fecha">Fecha de vencimiento:</label>
+                <input class="inputBox" placeholder="MM/AA" type="month" id="fecha" name="fecha" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label for="cvv">CVV:</label>
+                <input class="inputBox" placeholder="***" type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+            </div>
+            <br>
+            <input type="submit" value="Pagar" class="btn" id="btnPagar">
+        </form>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            localStorage.removeItem('cart'); // Clear the cart from local storage
+        });
+
+        const formPago = document.getElementById('formPago');
+        formPago.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Validate form fields
+            const nombre = document.getElementById('nombre').value.trim();
+            const apellido = document.getElementById('apellido').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const numeroTarjeta = document.getElementById('numeroTarjeta').value.trim();
+            const fecha = document.getElementById('fecha').value.trim();
+            const cvv = document.getElementById('cvv').value.trim();
+
+            if (!nombre || !apellido || !telefono || !correo || !numeroTarjeta || !fecha || !cvv) {
+                alert('Por favor, complete todos los campos.');
+                return;
+            }
+
+            // Validate credit card number
+            if (!/^\d{16}$/.test(numeroTarjeta)) {
+                alert('El número de tarjeta debe contener exactamente 16 dígitos.');
+                return;
+            }
+
+            // Validate expiration date
+            const currentDate = new Date();
+            const [year, month] = fecha.split('-').map(Number);
+            const expirationDate = new Date(year, month - 1); // Month is 0-based
+            if (expirationDate < currentDate) {
+                alert('La fecha de vencimiento no puede ser anterior a la fecha actual.');
+                return;
+            }
+
+            // Display success message
+            alert('¡Pago realizado con éxito! Gracias por tu compra!');
+
+            // Clear the cart from localStorage
+            localStorage.removeItem('cart');
+
+            // Redirect to another page (e.g., menu.php)
+            window.location.href = '../../VistaUsuarios/Ticket/generarNumeroOrden.html';
+        });
+    </script>
+</body>
+</html>

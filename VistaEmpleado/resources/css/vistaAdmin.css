@@ -1,0 +1,329 @@
+/* Variables de diseño */
+:root {
+    --cafe-oscuro: #4C2B18;
+    --cafe-medio: #6A3500;
+    --cafe-claro: #BF7D3B;
+    --cafe-dorado: #D4A056;
+    --crema: #FFF8F0;
+    --blanco: #FFFFFF;
+    --sombra: 0 4px 12px rgba(76, 43, 24, 0.15);
+    --borde-radius: 12px;
+    --success-bg: #d4edda;
+    --success-color: #155724;
+    --success-border: #c3e6cb;
+    --error-bg: #f8d7da;
+    --error-color: #721c24;
+    --error-border: #f5c6cb;
+}
+
+/* Estructura principal */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(76, 43, 24, 0.1), rgba(76, 43, 24, 0.1)),
+                url('../img/admin-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--cafe-medio);
+    min-height: 100vh;
+}
+
+/* Header mejorado */
+.header {
+    background-color: var(--cafe-oscuro);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--crema);
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.header nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.headerButton {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.headerButton:hover {
+    background-color: var(--cafe-dorado);
+    color: var(--cafe-oscuro);
+    transform: translateY(-2px);
+}
+
+.logoutButton {
+    background-color: var(--cafe-dorado);
+    color: var(--cafe-oscuro);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+    background-color: var(--crema);
+    transform: translateY(-2px);
+}
+
+/* Contenedor principal */
+.admin-container {
+    background-color: rgba(255, 248, 240, 0.97);
+    width: 95%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+}
+
+.admin-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--cafe-oscuro);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.admin-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--cafe-dorado), var(--cafe-claro));
+    border-radius: 3px;
+}
+
+/* Formulario de filtros */
+.filter-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.admin-input {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--cafe-claro);
+    border-radius: 30px;
+    background-color: var(--blanco);
+    color: var(--cafe-medio);
+    font-size: 0.95rem;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.admin-input:focus {
+    border-color: var(--cafe-dorado);
+    box-shadow: 0 0 0 3px rgba(212, 160, 86, 0.3);
+    outline: none;
+}
+
+.admin-button {
+    background: linear-gradient(to right, var(--cafe-claro), var(--cafe-dorado));
+    color: var(--blanco);
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(106, 53, 0, 0.2);
+}
+
+.admin-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(106, 53, 0, 0.3);
+}
+
+/* Tabla de pedidos */
+.pedidos-table-container {
+    overflow-x: auto;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    margin-top: 2rem;
+    background-color: var(--blanco);
+}
+
+.pedidos-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.pedidos-table th {
+    background: linear-gradient(to right, var(--cafe-medio), var(--cafe-oscuro));
+    color: var(--crema);
+    font-weight: 600;
+    padding: 1.2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.pedidos-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(191, 125, 59, 0.2);
+}
+
+.pedidos-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pedidos-table tr:nth-child(even) {
+    background-color: rgba(255, 248, 240, 0.7);
+}
+
+.pedidos-table tr:hover td {
+    background-color: rgba(212, 160, 86, 0.1);
+}
+
+/* Botones de acción */
+.action-button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin: 0.2rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.action-button.delete {
+    background-color: #F44336;
+    color: white;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Pie de tabla */
+.pedidos-table tfoot td {
+    background: linear-gradient(to right, rgba(191, 125, 59, 0.1), rgba(212, 160, 86, 0.2));
+    border-top: 2px solid var(--cafe-dorado);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Mensajes de éxito y error */
+.success-message {
+    background-color: var(--success-bg);
+    color: var(--success-color);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--success-border);
+    border-radius: var(--borde-radius);
+    text-align: center;
+}
+
+.error-message {
+    background-color: var(--error-bg);
+    color: var(--error-color);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--error-border);
+    border-radius: var(--borde-radius);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-input, .admin-button {
+        width: 100%;
+    }
+
+    .pedidos-table th,
+    .pedidos-table td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .action-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos para impresión */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    .header, .filter-form {
+        display: none;
+    }
+
+    .admin-container {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .pedidos-table {
+        width: 100%;
+        border: 1px solid #000;
+    }
+
+    .pedidos-table th {
+        background-color: #000 !important;
+        color: #fff !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .action-button {
+        display: none;
+    }
+}

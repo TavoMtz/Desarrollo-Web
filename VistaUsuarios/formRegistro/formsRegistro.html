@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="fomsRegistro.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="Imgs/favicon-32x32.png">
+</head>
+
+<body>
+   <div class="contenedorGeneral">
+        <div class="contenedorA">
+            <div class="contenedorMsj1">
+                <h1 class="msj1">¡Nos alegra verte aquí!</h1>
+            </div>
+            <div class="contenedorMsj2">
+                <h3 class="msj2">Forma parte de nuestra comunidad y disfruta de todo lo que tenemos para ti. 🌟</h3> 
+            </div>
+        </div>
+
+        <div class="contenedorB">
+            <div class="contenedorB1">
+                <div class="contenedorB2">
+                    <h2 style="margin-right: 10px;">Información Personal</h2> <h6>(*) Campos obligatorios.</h6>
+                </div>
+                <form class="form" action="registro.php" method="POST">
+                    <div>Nombre(s)* <br>
+                      <input class="inputBox" type="text" name="nombre" placeholder="Nombre(s)" required>
+                    </div>
+                    <br>
+                    <div> Apellidos* <br>
+                        <input class="inputBox" type="text" name="apellidos" placeholder="Apellidos" required>
+                    </div> 
+                    <br>
+                    <div> Email* <br>
+                        <input class="inputBox" type="text" name="email" placeholder="ejemplo@gmail.com" required>
+                    </div>
+                    <br>
+                    <div> Confirmar Email* <br>
+                        <input class="inputBox" type="text" name="c_email" placeholder="confirma ejemplo@gmail.com" required>
+                    </div>
+                    <br>
+                    <div> Contraseña* <br>
+                        <input class="inputBox" type="text" name="contraseña" placeholder="Contraseña" required>
+                    </div>
+                    <br>
+                    <div> Confirmar Contraseña* <br>
+                        <input class="inputBox" type="text" name="c_contraseña" placeholder="Confirma contraseña" required>
+                    </div>
+                    <br>
+                    <div class="aceptarCasilla">
+                        <input type="checkbox" name="aceptarTerminos" id="aceptarTerminos" required>
+                        <label for="aceptarTerminos">Acepto los términos y condiciones.*</label>
+                    </div>
+                    <br>
+                    <div class="aceptarCasilla">
+                        <input type="checkbox" name="aceptarPromos" id="aceptarPromos">
+                        <label for="aceptarPromos">Quiero recibir novedades sobre productos y promociones.</label>
+                    </div>
+                    <br>
+                    <button type="submit" class="botonRegistrarse"> ¡Registrarse! </button>
+                 </form>
+            </div>
+        </div>
+   </div>
+</body>
+</html>

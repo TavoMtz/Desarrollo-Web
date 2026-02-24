@@ -1,0 +1,48 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.fondo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image:url(../img/FotoBackgroundInicioSecion.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedorForms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 246, 246);
+    width: 25%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.inputBox{
+    border-radius: 5px;
+    border-style: solid;
+}
+
+/* Responsive para pantallas medianas */
+@media (max-width: 768px) {
+    .contenedorForms {
+        width: 60%;
+    }
+}
+
+/* Responsive para pantallas pequeñas (como móviles) */
+@media (max-width: 480px) {
+    .contenedorForms {
+        width: 90%;
+    }
+}

@@ -1,0 +1,205 @@
+/* Estilos para carrito.html */
+body {
+    font-family: sans-serif; /* Manteniendo la fuente por defecto por ahora */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Un gris claro de fondo */
+    color: #333;
+}
+
+header {
+    background-color: #4C2B18; /* Café oscuro del header */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    max-height: 50px; /* Ajusta el tamaño del logo si es necesario */
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.volver-menu {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #6A3500; /* Un tono de café */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.volver-menu:hover {
+    text-decoration: underline;
+}
+
+.carrito {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: white; /* Fondo blanco para el contenedor */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h2 {
+    color: #4C2B18; /* Café oscuro para el título */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+#lista-carrito li .icono {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#lista-carrito li button.editar {
+    background: none;
+    border: 1px solid #BF7D3B; /* Café claro para el borde */
+    color: #BF7D3B; /* Café claro para el texto */
+    padding: 5px 10px;
+    border-radius: 6px; /* Borde redondeado como en el index */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#lista-carrito li button.editar:hover {
+    background-color: #BF7D3B; /* Café claro al hover */
+    color: white;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-align: right;
+    color: #BF7D3B; /* Café claro para el total */
+}
+
+#btn-pagar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #BF7D3B; /* Café claro para el botón */
+    color: #6A3500; /* Café oscuro para el texto del botón */
+    border: none;
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#btn-pagar:hover {
+    background-color: #88422A; /* Un tono de café más oscuro al hover */
+    color: white;
+}
+
+.pago h2, .formulario-pago h2, .confirmacion h2 {
+    color: #4C2B18; /* Café oscuro para los títulos */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pago button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #FFD9B4; /* Beige para los botones de opción de pago */
+    color: #6A3500; /* Café oscuro para el texto */
+    border: 1px solid #6A3500;
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pago button:hover {
+    background-color: #6A3500; /* Café oscuro al hover */
+    color: white;
+}
+
+.formulario-pago form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9; /* Gris claro de fondo */
+    border-radius: 8px;
+}
+
+.formulario-pago label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formulario-pago input[type="text"],
+.formulario-pago input[type="password"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #88422A; /* Café medio para el borde de los inputs */
+    border-radius: 8px; /* Bordes redondeados */
+    color: #333; /* Color del texto en los inputs */
+}
+
+.formulario-pago button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #BF7D3B; /* Café claro para el botón de submit */
+    color: #6A3500; /* Café oscuro para el texto */
+    border: none;
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-pago button[type="submit"]:hover {
+    background-color: #88422A; /* Tono de café más oscuro al hover */
+    color: white;
+}
+
+.confirmacion h2 {
+    color: #4C2B18; /* Café oscuro para el título de confirmación */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.confirmacion p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.confirmacion h2.error {
+    color: red;
+}
+
+.confirmacion p.error {
+    color: darkred;
+    font-weight: bold;
+}

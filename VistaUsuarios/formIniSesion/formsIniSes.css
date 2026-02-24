@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4C2B18;
+    width: 100%;
+}
+
+.headerButton{
+    color: white;
+    text-decoration: none;
+}
+
+.headerButton:hover{
+    transform: translateY(-2px);
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+
+.headerButton{
+    color: white;
+    text-decoration: none;
+   
+}
+
+.buttonText{
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.mainPage{
+    display: flex;
+    background-image:url(Imgs/FotoBackgroundInicioSecion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana, viewport width o ancho del área*/
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana, viewport height o altura del área de visualización*/
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo{
+    display: flex;
+    width: 200px;
+    height: auto;
+    max-width: 250px;
+}
+
+.containerForms{
+    display: flex;
+    background-color:#BF7D3B;
+    width: 40vw;
+    height: 60vh;
+    max-width: 300px;
+    max-height: 600px;
+    border-radius: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.logoPersona{
+    display: flex;
+    width: 80px;
+    height: auto;
+    max-width: 150px;
+    padding-top: 5%;
+}
+
+.txt1{
+    color: white;
+    text-decoration: none;
+}
+
+.input{
+    border-radius: 8px;
+    color: white;
+    border: 1px solid #88422A;
+    background-color:#88422A;
+    padding: 5px;
+}
+.input::placeholder{
+    display: flex;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.507);
+}
+
+.BotonIniSesion{
+    border: 1px solid #FFD9B4;
+    color: #6A3500;
+    padding: 6px;
+    border-radius: 8px;
+    background-color:#FFD9B4 ;
+    text-decoration: none;
+}
+.BotonIniSesion:hover{
+    background-color: #BF7D3B;
+    color: white;
+}
+/*----*/

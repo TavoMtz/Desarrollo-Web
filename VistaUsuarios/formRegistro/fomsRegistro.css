@@ -1,0 +1,105 @@
+.contenedorGeneral{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedorA{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#BF7D3B;
+    color:white; 
+    padding: 10px;
+    align-items: center;
+}
+
+.contenedorMsj1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.contenedorMsj2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 70%;
+}
+
+.msj1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.msj2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.contenedorB{
+    display: flex;
+    flex: 1;
+    justify-content: center; 
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 30px;
+    
+
+}
+.contenedorB1{
+    background-color: #2D5A8A;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    padding-top: 10px;
+    max-width: 400px;
+}
+.contenedorB2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox{
+    border-radius: 5px;
+    border-color: none;
+    width: 300px;
+    height: 25px;
+}
+
+.aceptarCasilla{
+    display: flex;
+    align-items: center;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonRegistrarse{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1pxsolid #2D5A8A;
+    color: #2D5A8A;
+
+}
+.botonRegistrarse:hover{
+    background-color: #2D5A8A;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
