@@ -23,5 +23,5 @@ Este es un sistema web integral diseñado para la gestión y operación de una c
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Base de Datos:** MySQL
 
----
-*Proyecto desarrollado para optimizar la atención al cliente y la administración interna de una cafetería.*
+## Autores 
+Alexis Enrique Valle y Gustavo Enrique MArtinez Moreno
